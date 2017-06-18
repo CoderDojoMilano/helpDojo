@@ -1,0 +1,38 @@
+<!-- ho modificato lo script in modo che ora funzioni + o - come intelligenza artificiale -->
+<HTML>
+	<HEAD>
+		<TITLE>HELPDOJO</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+		
+		function rispondi(){
+				var domanda = document.getElementById("testo").value;
+				elabora(domanda);
+		}
+		
+		function elabora(domanda_da_elaborare){
+			domanda_da_elaborare.toLowerCase()
+			fase_a = domanda_da_elaborare.split("?");
+			var fase_b = fase_a[0];
+			var lista = fase_b.split(" ");
+			if((lista.includes("dove")) || (lista.includes("luogo"))){
+				alert("il prossimo coderdojo si terrà al @TAG a milano in via Merano 16");
+			}
+			if((lista.includes("quando")) || (lista.includes("tempo"))){
+				alert("il prossimo coderdojo si terrà il 31 febbraio\nLe iscrizioni si apriranno il lunedì prima alle 3:30 su eventbrite"); //che ne so io quando si terrà il prossimo coderdojo
+			}
+			if((lista.includes("eta")) || (lista.includes("età"))){
+				alert("al coderdojo possono partecipare tutti i ragazzi da 7 a 17 anni");
+			}
+		}
+		
+		</script>
+		
+		<form>
+		<p>fai una domanda</p>
+		<input type="text" id="testo"><button onclick="rispondi()">enter</button>
+		
+		</form>
+	</BODY>
+</HTML>
